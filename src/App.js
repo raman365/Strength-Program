@@ -8,6 +8,7 @@ function App() {
 
   const handleMaxChange = (event) => {
     setOneRepMax(event.target.value);
+    setIsButtonClicked(false);
   }
 
   const calculateWarmUp1 = () => {
