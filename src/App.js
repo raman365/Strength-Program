@@ -159,7 +159,8 @@ function App() {
         4 - 3 Sets of {calculateStrengthRoutine()}KG X 3 Reps (minimum)<br/>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Work up to 3 Sets of {calculateStrengthRoutine()}KG X 6 Reps (maximum)
       </p>
-      <Button variant="contained" onClick={handleClick}>Click Here When you reached 3 Sets of {calculateStrengthRoutine()}KG X 6 Reps</Button>
+      <p>Click below once you have reached 3 Sets of {calculateStrengthRoutine()}KG X 6 Reps</p>
+      <Button variant="contained" onClick={handleClick}>New Routine</Button>
       {isButtonClicked && <p>Congratulations, this is your new routine;<br/><br/>
         1 - Warm up {calculateNewWarmUp1()}KG X 10 Reps<br/>
         2 - Warm up {calculateNewWarmUp2()}KG X 5 Reps<br/>
