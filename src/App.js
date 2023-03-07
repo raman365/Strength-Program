@@ -79,9 +79,8 @@ function App() {
 
   const calculateNewWarmUp1 = () => {
     if (!isNaN(oneRepMax)) {
-      const oldRoutine = Math.round(0.15 * oneRepMax);
-      const progress = oldRoutine * 0.05;
-      const newRoutine = oldRoutine + progress;
+      const progress = calculateWarmUp1() * 0.05;
+      const newRoutine = calculateWarmUp1() + progress;
       const quotient = newRoutine / 5;
       const remainder = quotient - Math.floor(quotient);
     
@@ -96,9 +95,8 @@ function App() {
 
   const calculateNewWarmUp2 = () => {
     if (!isNaN(oneRepMax)) {
-      const oldRoutine = Math.round(0.45 * oneRepMax);
-      const progress = oldRoutine * 0.05;
-      const newRoutine = oldRoutine + progress;
+      const progress = calculateWarmUp2() * 0.05;
+      const newRoutine = calculateWarmUp2() + progress;
       const quotient = newRoutine / 5;
       const remainder = quotient - Math.floor(quotient);
     
@@ -113,9 +111,8 @@ function App() {
 
   const calculateNewWarmUp3 = () => {
     if (!isNaN(oneRepMax)) {
-      const oldRoutine = Math.round(0.65 * oneRepMax);
-      const progress = oldRoutine * 0.05;
-      const newRoutine = oldRoutine + progress;
+      const progress = calculateWarmUp3() * 0.05;
+      const newRoutine = calculateWarmUp3() + progress;
       const quotient = newRoutine / 5;
       const remainder = quotient - Math.floor(quotient);
     
@@ -129,9 +126,8 @@ function App() {
   }
   const calculateNewRoutine = () => {
     if (!isNaN(oneRepMax)) {
-      const oldRoutine = Math.round(0.85 * oneRepMax);
-      const progress = oldRoutine * 0.05;
-      const newRoutine = oldRoutine + progress;
+      const progress = calculateStrengthRoutine() * 0.05;
+      const newRoutine = calculateStrengthRoutine() + progress;
       const quotient = newRoutine / 5;
       const remainder = quotient - Math.floor(quotient);
     
