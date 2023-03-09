@@ -14,13 +14,13 @@ function App() {
   const calculateWarmUp1 = () => {
     if (!isNaN(oneRepMax)) {
       const warmUp1 = Math.round(0.15 * oneRepMax);
-      const quotient = warmUp1 / 5;
+      const quotient = warmUp1 / 2;
       const remainder = quotient - Math.floor(quotient);
     
       if (remainder < 0.5) {
-        return Math.floor(quotient) * 5;
+        return Math.ceil(quotient) * 2;
       } else {
-        return Math.ceil(quotient) * 5;
+        return Math.floor(quotient) * 2;
       }
         }
     return '';
@@ -29,13 +29,13 @@ function App() {
   const calculateWarmUp2 = () => {
     if (!isNaN(oneRepMax)) {
       const warmUp2 = Math.round(0.45 * oneRepMax);
-      const quotient = warmUp2 / 5;
+      const quotient = warmUp2 / 2;
   const remainder = quotient - Math.floor(quotient);
 
   if (remainder < 0.5) {
-    return Math.floor(quotient) * 5;
+    return Math.ceil(quotient) * 2;
   } else {
-    return Math.ceil(quotient) * 5;
+    return Math.floor(quotient) * 2;
   }
     }
     return '';
@@ -44,13 +44,13 @@ function App() {
   const calculateWarmUp3 = () => {
     if (!isNaN(oneRepMax)) {
       const warmUp3 = Math.round(0.65 * oneRepMax);
-      const quotient = warmUp3 / 5;
+      const quotient = warmUp3 / 2;
       const remainder = quotient - Math.floor(quotient);
     
       if (remainder < 0.5) {
-        return Math.floor(quotient) * 5;
+        return Math.ceil(quotient) * 2;
       } else {
-        return Math.ceil(quotient) * 5;
+        return Math.floor(quotient) * 2;
       }
         }
     return '';
@@ -59,13 +59,13 @@ function App() {
   const calculateStrengthRoutine = () => {
     if (!isNaN(oneRepMax)) {
       const strengthRoutine = Math.round(0.85 * oneRepMax);
-      const quotient = strengthRoutine / 5;
+      const quotient = strengthRoutine / 2;
       const remainder = quotient - Math.floor(quotient);
     
       if (remainder < 0.5) {
-        return Math.floor(quotient) * 5;
+        return Math.ceil(quotient) * 2;
       } else {
-        return Math.ceil(quotient) * 5;
+        return Math.floor(quotient) * 2;
       }
         }
     return '';
@@ -81,13 +81,13 @@ function App() {
     if (!isNaN(oneRepMax)) {
       const progress = calculateWarmUp1() * 0.05;
       const newRoutine = calculateWarmUp1() + progress;
-      const quotient = newRoutine / 5;
+      const quotient = newRoutine / 2;
       const remainder = quotient - Math.floor(quotient);
     
-      if (remainder < 0.5) {
-        return Math.floor(quotient) * 5;
+      if (remainder > 0.5) {
+        return Math.ceil(quotient) * 2;
       } else {
-        return Math.ceil(quotient) * 5;
+        return Math.floor(quotient) * 2;
       }
         }
     return '';
@@ -97,13 +97,13 @@ function App() {
     if (!isNaN(oneRepMax)) {
       const progress = calculateWarmUp2() * 0.05;
       const newRoutine = calculateWarmUp2() + progress;
-      const quotient = newRoutine / 5;
+      const quotient = newRoutine / 2;
       const remainder = quotient - Math.floor(quotient);
     
-      if (remainder < 0.5) {
-        return Math.floor(quotient) * 5;
+      if (remainder > 0.5) {
+        return Math.ceil(quotient) * 2;
       } else {
-        return Math.ceil(quotient) * 5;
+        return Math.floor(quotient) * 2;
       }
         }
     return '';
@@ -113,13 +113,13 @@ function App() {
     if (!isNaN(oneRepMax)) {
       const progress = calculateWarmUp3() * 0.05;
       const newRoutine = calculateWarmUp3() + progress;
-      const quotient = newRoutine / 5;
+      const quotient = newRoutine / 2;
       const remainder = quotient - Math.floor(quotient);
     
-      if (remainder < 0.5) {
-        return Math.floor(quotient) * 5;
+      if (remainder > 0.5) {
+        return Math.ceil(quotient) * 2;
       } else {
-        return Math.ceil(quotient) * 5;
+        return Math.floor(quotient) * 2;
       }
         }
     return '';
@@ -128,13 +128,13 @@ function App() {
     if (!isNaN(oneRepMax)) {
       const progress = calculateStrengthRoutine() * 0.05;
       const newRoutine = calculateStrengthRoutine() + progress;
-      const quotient = newRoutine / 5;
+      const quotient = newRoutine / 2;
       const remainder = quotient - Math.floor(quotient);
     
-      if (remainder < 0.5) {
-        return Math.floor(quotient) * 5;
+      if (remainder > 0.5) {
+        return Math.ceil(quotient) * 2;
       } else {
-        return Math.ceil(quotient) * 5;
+        return Math.floor(quotient) * 2;
       }
         }
     return '';
